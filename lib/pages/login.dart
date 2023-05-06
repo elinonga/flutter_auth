@@ -12,8 +12,9 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text("Login Page")),
-        body: Center(
+        body: ListView(
+      children: [
+        Center(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -28,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
               child: const Text("Forgot Password?"),
               style: TextButton.styleFrom(primary: Colors.grey),
             ),
-            // const SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {},
               child: const Text("LOGIN"),
@@ -40,7 +41,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             const SizedBox(height: 20),
-            const Text("Or login with"),
+            const Text("OR"),
             const SizedBox(height: 20),
             _buildGoogleSignInButton(),
             const SizedBox(height: 20),
@@ -55,8 +56,11 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ],
             ),
+            const SizedBox(height: 20),
           ],
-        )));
+        )),
+      ],
+    ));
   }
 
   Widget _buildTextField(String label) {
@@ -82,9 +86,9 @@ class _LoginPageState extends State<LoginPage> {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: const <Widget>[
-          // Image(image: AssetImage("assets/images/google_logo.png"), height: 30),
+          Image(image: AssetImage("assets/images/google_logo.png"), height: 30),
           SizedBox(width: 10),
-          Text("Google"),
+          Text("Login with Google"),
         ],
       ),
     );
