@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:login/widgets/image_header.dart';
-import 'package:login/widgets/password_input.dart';
-import 'package:login/widgets/save_button.dart';
-import 'package:login/widgets/text_header.dart';
-import 'package:login/widgets/text_input_field.dart';
+import 'package:login/widgets/headers/image_header.dart';
+import 'package:login/widgets/inputs/password_input.dart';
+import 'package:login/widgets/buttons/save_button.dart';
+import 'package:login/widgets/headers/text_header.dart';
+import 'package:login/widgets/inputs/text_input_field.dart';
 import 'package:login/widgets/text_link.dart';
 
 class LoginPage extends StatefulWidget {
