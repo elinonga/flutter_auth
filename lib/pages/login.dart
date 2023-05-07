@@ -18,33 +18,77 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const FlutterLogo(size: 100),
-            const SizedBox(height: 50),
-            _buildTextField("Email"),
-            const SizedBox(height: 20),
-            _buildPasswordField("Password"),
-            const SizedBox(height: 20),
-            TextButton(
-              onPressed: () {},
-              child: const Text("Forgot Password?"),
-              style: TextButton.styleFrom(primary: Colors.grey),
+            const SizedBox(height: 10),
+
+            // Clinic Image
+            const Image(
+              image: AssetImage("assets/images/clinic_logo.png"),
+              height: 100,
+            ),
+            const SizedBox(height: 35),
+
+            // Login - Text
+            const Padding(
+              padding: EdgeInsets.only(left: 20.0),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "Login",
+                  style: TextStyle(
+                      fontSize: 30,
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
             ),
             const SizedBox(height: 20),
+
+            // Email TextField
+            _buildTextField("Email"),
+            const SizedBox(height: 20),
+
+            // Password TextField
+            _buildPasswordField("Password"),
+            const SizedBox(height: 10),
+
+            // Forgot Password
+            Padding(
+              padding: const EdgeInsets.only(right: 12.0),
+              child: Align(
+                alignment: Alignment.centerRight,
+                child: TextButton(
+                  onPressed: () {},
+                  child: Text("Forgot Password?"),
+                  style: TextButton.styleFrom(
+                    primary: Colors.blue,
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+
+            // Login Button
             ElevatedButton(
               onPressed: () {},
-              child: const Text("LOGIN"),
+              child: Text("Login"),
               style: ElevatedButton.styleFrom(
                 primary: Colors.blue,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 50, vertical: 10),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 120,
+                  vertical: 10,
+                ),
                 textStyle: const TextStyle(fontSize: 20),
               ),
             ),
             const SizedBox(height: 20),
             const Text("OR"),
             const SizedBox(height: 20),
+
+            // Login with Google - Button
             _buildGoogleSignInButton(),
             const SizedBox(height: 20),
+
+            // New to clinic? Register
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
