@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:login/widgets/image_header.dart';
+import 'package:login/widgets/password_input.dart';
+import 'package:login/widgets/save_button.dart';
+import 'package:login/widgets/text_header.dart';
+import 'package:login/widgets/text_input_field.dart';
+import 'package:login/widgets/text_link.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -21,64 +27,47 @@ class _LoginPageState extends State<LoginPage> {
             const SizedBox(height: 10),
 
             // Clinic Image
-            const Image(
-              image: AssetImage("assets/images/clinic_logo.png"),
-              height: 100,
+            const CustomImageHeader(
+              imgUrl: "assets/images/clinic_logo.png",
             ),
             const SizedBox(height: 35),
 
             // Login - Text
-            const Padding(
-              padding: EdgeInsets.only(left: 20.0),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  "Login",
-                  style: TextStyle(
-                      fontSize: 30,
-                      color: Colors.blue,
-                      fontWeight: FontWeight.bold),
-                ),
-              ),
+            const CustomTextHeader(
+              header: "Login",
             ),
             const SizedBox(height: 20),
 
             // Email TextField
-            _buildTextField("Email"),
+            const CustomTextInputField(
+              label: "Email",
+            ),
+
             const SizedBox(height: 20),
 
             // Password TextField
-            _buildPasswordField("Password"),
+            const PasswordInput(
+              label: "Password",
+            ),
+
             const SizedBox(height: 10),
 
             // Forgot Password
-            Padding(
-              padding: const EdgeInsets.only(right: 12.0),
+            const Padding(
+              padding: EdgeInsets.only(right: 12.0),
               child: Align(
                 alignment: Alignment.centerRight,
-                child: TextButton(
-                  onPressed: () {},
-                  child: Text("Forgot Password?"),
-                  style: TextButton.styleFrom(
-                    primary: Colors.blue,
-                  ),
+                child: CustomTextLink(
+                  label: "Forgot Password?",
                 ),
               ),
             ),
+
             const SizedBox(height: 20),
 
             // Login Button
-            ElevatedButton(
-              onPressed: () {},
-              child: Text("Login"),
-              style: ElevatedButton.styleFrom(
-                primary: Colors.blue,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 120,
-                  vertical: 10,
-                ),
-                textStyle: const TextStyle(fontSize: 20),
-              ),
+            const CustomSaveButton(
+              label: "Login",
             ),
             const SizedBox(height: 20),
             const Text("OR"),
@@ -91,13 +80,11 @@ class _LoginPageState extends State<LoginPage> {
             // New to clinic? Register
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                const Text("New to Clinic?"),
-                TextButton(
-                  onPressed: () {},
-                  child: const Text("Register"),
-                  style: TextButton.styleFrom(primary: Colors.blue),
-                ),
+              children: const [
+                Text("New to Clinic?"),
+                CustomTextLink(
+                  label: "Register",
+                )
               ],
             ),
             const SizedBox(height: 20),
@@ -105,18 +92,6 @@ class _LoginPageState extends State<LoginPage> {
         )),
       ],
     ));
-  }
-
-  Widget _buildTextField(String label) {
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 20),
-      child: TextField(
-        decoration: InputDecoration(
-          labelText: label,
-          border: OutlineInputBorder(),
-        ),
-      ),
-    );
   }
 
   Widget _buildGoogleSignInButton() {
@@ -134,29 +109,6 @@ class _LoginPageState extends State<LoginPage> {
           SizedBox(width: 10),
           Text("Login with Google"),
         ],
-      ),
-    );
-  }
-
-  Widget _buildPasswordField(String label) {
-    return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 20),
-      child: TextField(
-        obscureText: _isObscure,
-        decoration: InputDecoration(
-          labelText: label,
-          border: OutlineInputBorder(),
-          suffixIcon: IconButton(
-            icon: _isObscure
-                ? const Icon(Icons.visibility_off)
-                : const Icon(Icons.visibility),
-            onPressed: () {
-              setState(() {
-                _isObscure = !_isObscure;
-              });
-            },
-          ),
-        ),
       ),
     );
   }
