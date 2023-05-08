@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login/pages/login.dart';
+import 'package:login/widgets/buttons/save_button.dart';
 import 'package:login/widgets/headers/image_header.dart';
 import 'package:login/widgets/headers/text_header.dart';
 import 'package:login/widgets/inputs/password_input.dart';
@@ -19,14 +20,15 @@ class _RegistrationPageState extends State<RegistrationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: const Text(
-        "Register",
-      )),
+        iconTheme: const IconThemeData(
+          color: Colors.black,
+        ),
+        backgroundColor: Colors.transparent,
+        elevation: 0.0,
+      ),
       body: ListView(children: [
         Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            const SizedBox(height: 10),
-
             // Clinic Image
             const CustomImageHeader(
               imgUrl: "assets/images/sign.png",
@@ -106,6 +108,24 @@ class _RegistrationPageState extends State<RegistrationPage> {
               ),
             ),
             const SizedBox(height: 20),
+
+            // Register Buttons
+            const CustomSaveButton(label: "Register"),
+            const SizedBox(height: 10),
+
+            // already has an account?
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Text("Joined us before?"),
+                CustomTextLink(
+                  label: "Login",
+                  page: LoginPage(),
+                )
+              ],
+            ),
+            const SizedBox(height: 20),
+
             //
           ]),
         )
