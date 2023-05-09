@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login/pages/forgot_password.dart';
 import 'package:login/pages/register.dart';
 import 'package:login/widgets/headers/image_header.dart';
 import 'package:login/widgets/inputs/password_input.dart';
@@ -60,7 +61,7 @@ class _LoginPageState extends State<LoginPage> {
                 alignment: Alignment.centerRight,
                 child: CustomTextLink(
                   label: "Forgot Password?",
-                  page: RegistrationPage(), // Hii itabadilika soon
+                  page: ForgotPasswordPage(), // Hii itabadilika soon
                 ),
               ),
             ),

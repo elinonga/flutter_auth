@@ -19,13 +19,6 @@ class _RegistrationPageState extends State<RegistrationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        iconTheme: const IconThemeData(
-          color: Colors.black,
-        ),
-        backgroundColor: Colors.transparent,
-        elevation: 0.0,
-      ),
       body: ListView(children: [
         Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
