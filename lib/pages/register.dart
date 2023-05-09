@@ -31,7 +31,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             // Clinic Image
             const CustomImageHeader(
-              imgUrl: "assets/images/sign.png",
+              imgUrl: "assets/images/banners/register.png",
             ),
             const SizedBox(height: 20),
 

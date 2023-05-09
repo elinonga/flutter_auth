@@ -29,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
 
             // Clinic Image
             const CustomImageHeader(
-              imgUrl: "assets/images/clinic_logo.png",
+              imgUrl: "assets/images/banners/login.png",
             ),
             const SizedBox(height: 35),
 

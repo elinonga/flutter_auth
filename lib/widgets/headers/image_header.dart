@@ -9,7 +9,7 @@ class CustomImageHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Image(
       image: AssetImage(imgUrl),
-      height: 100,
+      height: 300,
     );
   }
 }
