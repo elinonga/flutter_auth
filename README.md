@@ -20,7 +20,7 @@ To run the app on your local machine, you will need to have Flutter and an Andro
 
 ## Screenshots
 
-Here's a screenshot of the app's home screen:
+Here's a screenshot of the app, inspiration from --> https://dribbble.com/shots/16316303-Login-and-Sign-up-Screens :
 
 ![Screenshot](assets/images/readme/login.png)
 
