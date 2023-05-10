@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:login/pages/enter_otp.dart';
 import 'package:login/pages/login.dart';
+import 'package:login/pages/reset_password.dart';
 import 'package:login/widgets/buttons/save_button.dart';
 import 'package:login/widgets/headers/image_header.dart';
 import 'package:login/widgets/headers/text_header.dart';
@@ -85,7 +86,8 @@ class _RegistrationPageState extends State<RegistrationPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const EnterOTPPage()),
+                              builder: (context) => const EnterOTPPage(),
+                            ),
                           );
                         },
                     ),
@@ -100,6 +102,12 @@ class _RegistrationPageState extends State<RegistrationPage> {
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
                           // Handle the privacy policy link tap here
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    const ResetPasswordPage()),
+                          );
                         },
                     ),
                   ],
