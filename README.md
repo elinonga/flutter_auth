@@ -22,7 +22,7 @@ To run the app on your local machine, you will need to have Flutter and an Andro
 
 Here's a screenshot of the app's home screen:
 
-![Screenshot](assets/readme/login.png)
+![Screenshot](assets/images/readme/login.png)
 
 ## Contributing
 
