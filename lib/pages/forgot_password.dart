@@ -49,7 +49,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                     right: 20.0,
                   ),
                   child: Text(
-                    """It happens to the best of us. Please enter the email address linked to your account, and we'll guide you through the password reset process.""",
+                    "It happens to the best of us. Please enter the email address linked to your account, and we'll guide you through the password reset process.",
                   ),
                 ),
                 SizedBox(height: 25),
